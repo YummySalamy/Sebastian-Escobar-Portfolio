@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Grid from '../components/Grid';
 
 import { FaReact } from "react-icons/fa6";
 import { FaNodeJs, FaWhatsapp, FaPython } from "react-icons/fa";
@@ -57,16 +57,17 @@ const TechsUsed = () => {
             logo: <FaWhatsapp />,
         },
     ];
+    const isMobile = window.innerWidth < 768;
 
     return (
         <div>
-            <div className='techs-container'>
+            <Grid columns={isMobile ? 4 : 12}>
                 {techs.map((tech, index) => (
                     <div key={index} className='tech'>
                         {tech.logo}
                     </div>
                 ))}
-            </div>
+            </Grid>
         </div>
     );
 };

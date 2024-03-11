@@ -14,11 +14,12 @@ const contact_platforms = [
 
 const Contact = () => {
     const [platforms, setPlatforms] = useState(contact_platforms);
+    const isMobile = window.innerWidth < 768;
 
     return (
         <div className='contact-me-container'>
             <h1>Contact Me</h1>
-            <Grid columns={5}>
+            <Grid columns={isMobile ? 2 : 5}>
                 {platforms.map((platform, index) => (
                     <a key={index} href={platform.link} target='_blank' rel='noreferrer'>
                         {platform.icon}
