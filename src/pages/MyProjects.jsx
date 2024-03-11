@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import Grid from '../components/Grid';
 import Table from '../components/Table';
 import Card from '../components/cards/Card';
+import Inspected from '../components/inspector/Inspected';
 import { Link } from 'react-router-dom';
 
 import { FaReact } from "react-icons/fa6";
@@ -9,27 +10,35 @@ import { FaNodeJs, FaWhatsapp, FaPython } from "react-icons/fa";
 import { DiMysql } from "react-icons/di";
 import { SiArduino, SiFirebase, SiGooglecloud, SiJavascript, SiTensorflow, SiTailwindcss, SiCss3 } from "react-icons/si";
 
+import FreshPlaceImage from '../assets/mockups/fresh-place.png';
+import SiriusImage from '../assets/mockups/sirius-mockup.png';
+import ClassifierImage from '../assets/mockups/image-classifier.png';
+import NubotImage from '../assets/mockups/nubot-mockup.png';
+
 const projectsList = [
     {
         id: 1,
         title: 'Fresh Place',
-        description: 'A web application for finding and sharing recipes.',
-        path: <Link to="/projects/fresh-place">View Project</Link>,
+        description: 'A web application of a company distributing fresh groceries.',
+        path: 'https://fresh-place.com',
         techs: [<FaReact />, <FaNodeJs />, <SiTailwindcss />],
+        image: FreshPlaceImage,
     },
     {
         id: 2,
         title: 'SIRIUS',
         description: 'A muti-platform application for physics studies and simulations.',
-        path: <Link to="/projects/sirius">View Project</Link>,
+        path: 'https://github.com/jesusckantillo/expofisica-front/tree/dev_yummy',
         techs: [<FaReact />, <FaNodeJs />, <SiJavascript />, <SiArduino />],
+        image: SiriusImage,
     },
     {
         id: 3,
         title: 'AI Image Classifier',
         description: 'A Python application that uses machine learning to classify images.',
-        path: <Link to="/projects/twilight">View Project</Link>,
+        path: 'https://github.com/YummySalamy/Image_classifier',
         techs: [<FaPython />, <SiTensorflow />],
+        image: ClassifierImage,
     },
     {
         id: 4,
@@ -47,13 +56,15 @@ const projectsList = [
         id: 6,
         title: 'nubot.io',
         description: 'A web application that allows users to auto-manage their companies with AI.',
-        path: <Link to="/projects/nubot">View Project</Link>,
+        path: 'https://nubot.io',
         techs: [<FaReact />, <FaNodeJs/>,  <FaPython />, <SiFirebase />, <SiGooglecloud />, <SiTensorflow />, <SiTailwindcss />, <SiCss3 />],
+        image: NubotImage,
     }
 ];
 
 const MyProjects = () => {
     const isMobile = window.innerWidth < 768;
+    const [selectedProject, setSelectedProject] = useState(null);
 
     return (
         <div>
@@ -66,11 +77,14 @@ const MyProjects = () => {
                         description={project.description}
                         path={project.path}
                         button={project.path ? true : false}
-                        buttonAction={project.path}
+                        buttonAction={() => setSelectedProject(project)}
                         techs={project.techs}
                     />
                 ))}
             </Grid>
+            { selectedProject && 
+                <Inspected project={selectedProject} setSelectedProject={setSelectedProject} />
+            }
         </div>
     );
 };
