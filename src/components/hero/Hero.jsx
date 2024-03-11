@@ -1,4 +1,5 @@
 import React from "react";
+import ProfilePic from "../../assets/my-picture.jpeg";
 import { Link } from "react-router-dom";
 
 const Hero = () => {
@@ -14,7 +15,7 @@ const Hero = () => {
                 </Link>
             </div>
             <div className="hero-right-column">
-                <img src="src/assets/my-picture.jpeg" alt="profile" />
+                <img src={ProfilePic} alt="profile" />
             </div>
         </div>
     );
