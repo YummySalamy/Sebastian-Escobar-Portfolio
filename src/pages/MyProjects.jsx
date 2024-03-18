@@ -14,6 +14,7 @@ import FreshPlaceImage from '../assets/mockups/fresh-place.png';
 import SiriusImage from '../assets/mockups/sirius-mockup.png';
 import ClassifierImage from '../assets/mockups/image-classifier.png';
 import NubotImage from '../assets/mockups/nubot-mockup.png';
+import Aurora from '../assets/mockups/Aurora.png';
 
 const projectsList = [
     {
@@ -45,6 +46,8 @@ const projectsList = [
         title: 'Aurora',
         description: 'Coming soon.',
         techs: [<FaNodeJs />, <SiFirebase />, <SiGooglecloud />, <DiMysql />, <FaWhatsapp />],
+        path: 'https://eclipse-eight.vercel.app/',
+        image: Aurora,
     },
     {
         id: 5,
