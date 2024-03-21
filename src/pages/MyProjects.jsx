@@ -15,6 +15,7 @@ import SiriusImage from '../assets/mockups/sirius-mockup.png';
 import ClassifierImage from '../assets/mockups/image-classifier.png';
 import NubotImage from '../assets/mockups/nubot-mockup.png';
 import Aurora from '../assets/mockups/Aurora.png';
+import EclipseImage from '../assets/mockups/eclipse-mockup.png';
 
 const projectsList = [
     {
@@ -45,15 +46,17 @@ const projectsList = [
         id: 4,
         title: 'Aurora',
         description: 'Coming soon.',
-        techs: [<FaNodeJs />, <SiFirebase />, <SiGooglecloud />, <DiMysql />, <FaWhatsapp />],
-        path: 'https://eclipse-eight.vercel.app/',
+        techs: [<FaReact />, <SiCss3 />, <SiJavascript />],
+        path: 'https://aurora-insight.vercel.app/',
         image: Aurora,
     },
     {
         id: 5,
         title: 'Eclipse',
-        description: 'Coming soon.',
-        techs: [<FaReact />, <SiCss3 />, <SiJavascript />],
+        description: 'A web application that is designed to be a an all-in-one platform administrator.',
+        techs: [<FaNodeJs />, <SiFirebase />, <SiGooglecloud />, <DiMysql />, <FaWhatsapp />],
+        path: 'https://eclipse-theta.vercel.app/',
+        image: EclipseImage,
     },
     {
         id: 6,
