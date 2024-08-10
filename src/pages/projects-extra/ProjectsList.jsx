@@ -11,6 +11,7 @@ import Aurora from '../../assets/mockups/Aurora.png';
 import EclipseImage from '../../assets/mockups/eclipse-mockup.png';
 import RetroModernMaketPlaceImage from '../../assets/mockups/retromodern-marketplace-mockup.png';
 import DataPathImage from '../../assets/mockups/datapath-e-learning-mockup1.png';
+import DataPathSecondImage from '../../assets/mockups/datapath-e-learning-mockup2.png';
 import JewerlyShopImage from '../../assets/mockups/jewerly-shop-mockup.jpg';
 
 const projects = [
@@ -62,6 +63,7 @@ const projects = [
         path: 'https://datapath-e-learning-tests.vercel.app/',
         techs: [<FaReact />, <SiCss3 />, <SiJavascript />, <SiFirebase />, <SiGooglecloud />, <DiMysql />],
         image: DataPathImage,
+        second_image: DataPathSecondImage,
     },
     {
         id: 7,

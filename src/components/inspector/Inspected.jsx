@@ -4,7 +4,10 @@ const Inspected = ({ project, setSelectedProject }) => {
     return (
         <div className="inspected-container">
             <h1>{project.title}</h1>
-            {project.image && <img src={project.image} alt={project.title} />}
+            <div className="images-container">
+                {project.image && <img src={project.image} alt={project.title} />}
+                {project.second_image && <img className="second_image" src={project.second_image} alt={project.title} />}
+            </div>
             <p>{project.description}</p>
             <div className="techs-container">
                 Techs used:

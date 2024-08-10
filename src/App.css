@@ -281,6 +281,16 @@
   transition: opacity 300ms;
 }
 
+.images-container {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  @media screen and (max-width: 768px){
+    flex-direction: column;
+
+  }
+}
+
 .buttons-container {
   display: flex;
   gap: 1em;
@@ -291,4 +301,11 @@
   max-width: 400px;
   border-radius: 1em;
   box-shadow: 0 0 2em #646cffaa;
+}
+
+.second_image {
+  @media screen and (max-width: 768px){
+    display: none;
+    
+  }
 }
